@@ -1,7 +1,7 @@
-pipeline{
+pipeline {
   agent any
 
-  stages{
+  stages {
     stage('Jieyao Deng - Build Docker Image') {
       steps {
 	echo "Here we build a Docker image."
