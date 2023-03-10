@@ -4,7 +4,7 @@ pipeline {
       stage('Jieyao Deng - Build Docker Image') {
         steps {
           echo "Here we build a Docker image."
-          sh "docker image build -t=my_first_image ."
+          sh "docker image build -t="my_first_image" ."
         }
       }
       stage('Jieyao Deng - Login to Dockerhub') {
