@@ -10,7 +10,7 @@ pipeline {
       stage('Jieyao Deng - Login to Dockerhub') {
         steps {
           bat "echo login-to-Dockerhub"
-          bat "cat Dockerhub_passwd.txt | docker login -u joydamien --password-stdin"
+          bat "type Dockerhub_passwd.txt | docker login -u joydamien --password-stdin"
         }
       }
       stage('Jieyao Deng - Push image to Dockerhub') {
