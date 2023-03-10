@@ -4,13 +4,13 @@ pipeline {
       stage('Jieyao Deng - Build Docker Image') {
         steps {
           echo "Here we build a Docker image."
-          sh "docker image build -t myfirstimage:0.1 C:\ProgramData\Jenkins\.jenkins\workspace\Pipeline-jenkinsfile-webhook"
+          sh "docker image build -t myfirstimage:0.1 /cygdrive/c/ProgramData/Jenkins/.jenkins/workspace/Pipeline-jenkinsfile-webhook"
         }
       }
       stage('Jieyao Deng - Login to Dockerhub') {
         steps {
           echo "Here we login to Dockerhub."
-          sh "cat C:\ProgramData\Jenkins\.jenkins\workspace\Pipeline-jenkinsfile-webhook\Dockerhub_passwd.txt | docker login -u joydamien --password-stdin"
+          sh "cat /cygdrive/c/ProgramData/Jenkins/.jenkins/workspace/Pipeline-jenkinsfile-webhook/Dockerhub_passwd.txt | docker login -u joydamien --password-stdin"
         }
       }
       stage('Jieyao Deng - Push image to Dockerhub') {
