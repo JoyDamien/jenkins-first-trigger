@@ -16,7 +16,8 @@ pipeline {
       stage('Jieyao Deng - Push image to Dockerhub') {
         steps{
           bat "echo push-image-to-Dockerhub"
-          bat "docker image push joydamien/myfirstimage"
+	  bat "docker tag myfirstimage joydamien/myfirstimage:0.1"
+          bat "docker image push joydamien/myfirstimage:0.1"
         }
       }
     }
